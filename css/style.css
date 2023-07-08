@@ -1,0 +1,811 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  font-family: 'Volkhov', serif;
+}
+/*..............NAVBAR-hamburger.............*/
+nav{
+  background-color: #100303;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  top:0;
+  left:0;
+  background-size: cover;
+  z-index: 3;
+  padding-right: 10%;
+
+}
+
+label.logo{
+  color:#fff;
+  font-size:100%;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  float: left;
+  margin-top: 0%;
+  
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+}
+
+
+header {
+  background-color: #100303;
+  position: fixed;
+  height: auto;
+  background-size: cover;
+  width: 50px;
+  height:10%;
+  z-index: 2;
+  background-color: #100303;
+}
+.menu{
+  margin-top: 0;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #100303;
+}
+
+.header ul a{
+  display: block;
+  padding: 10px 15px;
+  color:#fff;
+}
+.active {
+  background-color:rgba(228, 16, 115, 0.808) ;
+  font-weight: bold;
+}
+
+.header ul a:hover {
+  background-color:#333;
+  text-decoration: none;
+}
+
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu-icon{
+  /*border: 1px solid red;----------------PANINOOOOOOOO-----------------------*/
+  padding: 5% 1%;
+  position: relative;
+  float: right;
+  cursor: pointer;
+  margin-top: -1%;
+  margin-right: -10%;
+}
+
+.header .menu-icon .nav-icon{
+  background-color: #fff;
+  display: block;
+  width: 30px;
+  height: 2px;
+  position:relative;
+  transition: background-color .2s ease-out;
+}
+
+.header .menu-icon .nav-icon::before,
+.header .menu-icon .nav-icon::after{
+  background-color:#fff;
+  content: "";
+  display: block;
+  height: 100%; /*fanno riferimento alla position relative dell'elemento .header .menu-icon .nav-icon, sono cioè il 100% di 2px*/
+  width: 100%;
+  transition: all .2s ease-out;
+  position: absolute;
+
+}
+.header .menu-icon .nav-icon::before{
+  top: 10px;
+}
+.header .menu-icon .nav-icon::after{
+  top: -10px;
+}
+
+.header .menu-btn {
+  display:none; /*la checkbox cioè il quadratino bianco non c'è più ma il comportamento c'è ancora*/
+}
+.header .menu-btn:checked ~ .menu { /*quando la chackbox è checkata quello che ti dico di fare lo vai a fare sul menu, è per questo che si usa la tilde*/
+  margin-top:20px;
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background-color: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon::before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::after{
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 60em) {
+  .logo {
+    padding-top: 6px;
+    font-size: 10%;
+  }
+  
+  nav {
+    margin: 0%;
+    background-color: #100303;
+    height: 10%;
+  }
+  .active {
+    padding: 4% 2%;
+  }
+  .header li {
+    float: left;
+    background-color:#100303;
+
+  }
+
+  .header li a {
+    padding: 20px 20px;
+    margin-top: 0px;
+  }
+
+  .header .menu{
+    clear: none; /*noi vogliamo che il logo abbia effetto sul menu, non come prima che avevamo messo both (both sta per:" fai il tuo dovere sia dall'alto-basso cge da destra e sinistra indipendentemente dal logo)*/
+    float: right;
+    max-height: none;
+    width: 80%;
+    height: 100%;
+    margin-right: -30%;
+  }
+  
+  .header .menu-icon{
+    display: none;
+  }
+
+
+}
+
+/*.........SFONDO.......*/
+.container-fluid{
+  background-color: #100303;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 0;
+  top:0;
+  right:0;
+}
+
+.row {
+  width: 100%;
+}
+
+
+.immagine-sfondo {
+  width: 100%; 
+  height: auto;
+  display: block;
+  margin-top: 8%;
+  z-index: 0;
+  padding:0;
+  background-size: cover;
+}
+
+@media (min-width: 60em) {
+  .immagine-sfondo {
+    margin-top: 4%;
+}
+}
+
+
+/*..........HOME..........*/
+h1 {
+  z-index:1;
+  margin-top: -28%;
+  color:#fff;
+  float:left;
+  z-index:1;
+  margin-left: 30%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 2em;
+
+}
+.stra {
+  color:rgba(234, 16, 118, 0.952);
+
+}
+.musìk {
+  color: white; 
+}
+
+
+.sottotitolo-home {
+  color: white;
+  font-size: 70%;
+  text-align: left;
+  margin-top: -21%;
+  margin-left: 34%;
+
+}
+
+.nuovi-mondi-home {
+  color:#fff;
+  padding: 5%;
+  font-size: 100%;
+  font-weight:lighter;
+  text-align:center;
+  margin-left: 0%;
+  margin-top: 17%;
+  margin-bottom:0%;
+  width: 100%; /* Regola la larghezza dell'immagine al 100% della larghezza del contenitore */
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Due colonne di larghezza uguale */
+  grid-template-rows: auto auto; /* Due righe di altezza automatica */
+  grid-gap: 10px; /* Spazio tra le celle */
+  grid-gap: 0px;
+}
+
+.item {
+  padding: 20px;
+  font-size: 90%;
+}
+
+.item1 {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #100303;
+  padding: 18%;
+  color: #fff;
+}
+
+.item2 {
+  grid-column: 2;
+  grid-row: 1; 
+  background-color: rgb(255, 0, 119);
+  padding:0%;
+}
+
+.item3 {
+  grid-column: 1;
+  grid-row: 2;
+  background-color:  rgb(255, 0, 119);
+  padding: 0%;
+}
+
+.item4 {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #100303;
+  color: #fff;
+}
+
+.item2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adatta l'immagine alle dimensioni del suo contenitore */
+}
+
+#idraulofono-img {
+  width: 100%;
+  height: auto;
+}
+#zeusaphone-img {
+  width: 100%;
+  height: auto;
+}
+
+a.btn.btn-primary {
+
+  padding: 2% 5%;
+  background-color:#fff;
+  color:rgb(0, 0, 0);
+  border-color: rgb(255, 0, 119) ;
+  font-size: 70%;
+
+}
+
+
+@media (min-width: 60em) {
+  h1 {
+    font-size: 5em;
+    margin-bottom: 9%;
+    margin-left: 30%;
+    width: 20%;
+    height: 20%;
+    white-space: nowrap;
+  }
+  .sottotitolo-home {
+    font-size: 2em;
+    margin-bottom:0%;
+    margin-left: 31%;
+    margin-top: -22%;
+  }
+  .nuovi-mondi-home{
+    margin-top: 20%;
+    padding: 5%;
+    font-size: 50px;
+  }
+  .item {
+    padding: 20px;
+    font-size: 70%;
+  }
+  
+  .item1 {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #fff;
+    color: #100303;
+    font-size: 30px;
+    padding: 20%;
+  }
+  
+  .item2 {
+    grid-column: 2;
+    grid-row: 1 ; 
+    background-color: rgb(255, 0, 119);
+  }
+  
+  .item3 {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: rgb(255, 0, 119);
+  }
+  
+  .item4 {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 30px;
+    background-color: #fff;
+    color:#100303;
+    padding: 20%;
+  }
+  
+  .item2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta l'immagine alle dimensioni del suo contenitore */
+  }
+  #zeusaphone-img {
+    width: 100%;
+    height: auto;
+    padding:10% -1% 0% 0%;
+  }
+  #idraulofono-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  a.btn.btn-primary {
+  
+    padding: 2% 5%;
+    background-color:#fff;
+    color:rgb(0, 0, 0);
+    border-color: rgb(255, 0, 119) ;
+    font-size: 70%;
+  
+  }
+
+}
+
+
+
+/*...............DISPENSA.............*/
+
+.custom-container{
+  margin-top: -5%;
+  background-color: #100303;
+  width: 100%;
+}
+#dei-curiosi{
+  margin-top:-22%;
+  margin-left: 50%;
+  margin-bottom: 26%;
+  font-size: 18px;
+  color: rgb(255, 0, 119);
+}
+.menu-list-dispensa {
+  background-color: #333;
+  font-size: 60%;
+  width: 100%;
+  padding: 7% 0% 5% 3%;
+  margin: 0% -5%;
+
+}
+
+.menu-list-dispensa ul {
+  width: 100%;
+  background-color: #333;
+  list-style-type: none;
+  margin-top: -14%;
+  line-height: 1.7;
+}
+.menu-list-dispensa ul li:hover{
+  background-color: #333;
+}
+
+.baseline-dispensa {
+  color: white;
+  font-family: 'Volkhov', serif;
+  font-size: 80%;
+  text-align: left;
+  position: absolute;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 0%;
+  margin-left: 37%;
+  width: 64%;
+  height: 63%;
+  z-index: 1;
+  background-color: transparent;
+  overflow: auto;
+  background-color: #100303;
+
+}
+.baseline-dispensa h3 {
+  color: rgb(255, 0, 119);
+  font-size: 120%;
+}
+
+.colored-word {
+  color:rgb(255, 0, 119); 
+}
+
+
+#telharmonium-img {
+  width: 20%; /* Imposta la larghezza desiderata */
+  height: 5%; /* Imposta l'altezza automaticamente in base alla larghezza */
+}
+
+#braille-img {
+  width: 5%;
+}
+
+@media (min-width: 60em) {
+
+  .custom-container{
+    margin-top: -5%;
+    background-color: #fff;
+  }
+  .menu-list-dispensa {
+    font-size: 100%;
+    margin: 0% -1%;
+  }
+  .menu-list-dispensa ul{
+    line-height: 2;
+  }
+  .baseline-dispensa {
+    height: 53%;
+    background-color: #fff;
+    color:#100303;
+  }
+  .baseline-dispensa h3{
+    margin-top: 5%;
+    margin-left: 0%;
+    margin-bottom: 3%;
+    font-size: 200%;
+  }
+  #dei-curiosi{
+    margin-left: 52%;
+    font-size: 40px;
+  }
+}
+
+/*................QUIZ....................*/
+.container-fluid-quiz{
+  width: 100%;
+  height: auto;
+  background-color: #100303;
+  position: relative;
+  padding: 0;
+  top:0;
+  right:0;
+}
+#titolo-quiz{
+  margin-left: 40%;
+}
+
+#sottotitolo-quiz{
+  margin-top: -20%;
+  margin-left: 40%;
+  font-size: 90%;
+  color: #fff;
+}
+.baseline-quiz{
+  color: #fff;
+  margin-left: 5%;
+  margin-top: 20%;
+  margin-right: 6%;
+}
+
+.app{
+  background-color: #100303;
+  width: 100%;
+}
+
+.quiz-container {
+  font-family:'Volkhov', serif ;
+  font-weight: 80%;
+  width: 50%;
+  height: 120%;
+  margin: top 0%;
+  margin-left: 30%;
+  margin-bottom: -30%;
+  padding: 8% 3% 0% 5%;
+  border-radius: 10%;
+  z-index: 2;
+  color:#fff;
+  text-align: left;
+  position: absolute;
+  overflow: auto;
+}
+
+.quiz-container h2 {
+  color:rgb(255, 0, 119);
+}
+
+#question {
+  font-family:'Volkhov', serif ;
+  font-weight: 50%;
+  font-size: 100%;
+  margin-top: 10%;
+}
+
+.quiz{
+  background-color: #100303;
+  width: 90%;
+}
+.quiz h2{
+  margin-top: 20%;
+}
+
+
+.btn {
+  background-color: #fff;
+  color: #222;
+  margin-top: 5%;
+  margin-left: 1%;
+  padding-right: 5%;
+  padding-left: 2%;
+  width: 100%;
+  border-color:rgb(255, 0, 119);
+  
+  
+}
+
+.btn:hover:not([disabled]) {
+  background: #333;
+  color:#fff;
+  z-index: 1;
+
+}
+.btn:disabled{
+  cursor:no-drop;
+  z-index: 1;
+}
+
+.correct{
+  background: #9aead6;
+  z-index: 1;
+}
+
+.show-correct {
+  background-color: #9aead6;
+  z-index: 1;
+}
+.incorrect{
+  background: #f3316b;
+  z-index: 1;
+}
+
+#next-btn {
+  background-color: rgb(255, 0, 119);
+  color: #fff;
+  margin-top: 5%;
+  margin-left: 85%;
+  padding: 2% 3%;
+  width: auto; 
+  border: 0;
+  z-index: 1;
+  border-radius: 5%;
+}
+
+
+@media (min-width: 60em) {
+
+  #sottotitolo-quiz {
+    margin-left: 37%;
+    font-size: 30px;
+  }
+  .baseline-quiz{
+    font-size: 20px;
+    background-color: #fff;
+    color:#100303;
+  }
+  .btn {
+    float: left;
+    width: 100%;
+    /*box-sizing: border-box;*/
+  }
+}
+
+
+/*...................Riconosci Lo Strumento...............*/
+
+.immagine-sfondo-rls {
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+}
+  
+
+.quiz-container-rls {
+  font-family:'Volkhov', serif ;
+  font-weight: 100%;
+  width: 100%;
+  height: 100%;
+  margin-top:0%;
+  margin-left:0%;
+  margin-right: -5%;
+  background-color: #100303;
+  padding: 8% 3% 20% 5%;
+  text-align: left;
+
+}
+.quiz-container-rls h1{
+  margin-top: 0%;
+  margin-left: 0%;
+  color:rgb(255, 0, 119);
+  font-size: 130%;
+}
+.quiz-container-rls h2 {
+  color:#fff;
+}
+
+#audio-container {
+  padding-top: 7%;
+  padding-bottom: 3%;
+}
+
+@media (min-width: 60em) {
+
+  .immagine-sfondo-rls {
+    width: 100%;
+    height: auto;
+    margin-top: 4%;
+  }
+  .quiz-container-rls {
+    padding-top: 4%;
+  }
+  .quiz-container-rls h1{
+    font-size: 150%;
+  }
+  .quiz-container-rls h2 {
+    margin-left: 0%;
+    font-size: 120%;
+  }
+
+}
+
+/*.................DOMANDE PT.1, PT.2, PT.3..............*/
+
+.quiz-container-dom-pt-123 {
+  font-family:'Volkhov', serif ;
+  font-weight: 100%;
+  width: 100%;
+  height: 100%;
+  margin-top:0%;
+  margin-left:0%;
+  margin-right: -5%;
+  background-color: #100303;
+  padding: 8% 3% 20% 5%;
+  text-align: left;
+}
+
+.quiz-container-dom-pt-123 h1{
+  margin-top: 0%;
+  margin-left: 0%;
+  color:rgb(255, 0, 119);
+  font-size: 130%;
+}
+.quiz-container-dom-pt-123 h2 {
+  color:#fff;
+}
+
+@media (min-width: 60em) {
+
+  .quiz-container-dom-pt-123 {
+    padding-top: 4%;
+  }
+  .quiz-container-dom-pt-123 h1{
+    font-size: 150%;
+  }
+  .quiz-container-dom-pt-123 h2 {
+    margin-left: 0%;
+    font-size: 120%;
+  }
+
+}
+
+
+
+/*...........CONSIGLI.............*/
+.container-fluid-consigli {
+  background-color: rgb(255, 0, 119);
+  width: 180%;
+  height: auto;
+  position: relative;
+  padding: 0;
+  top:0;
+  right:0;
+}
+#modulo-consigli{
+  width: 30%;
+  height: auto;
+  margin-top: -120%;
+}
+.immagine-sfondo-consigli{
+  width: 100%; 
+  height: auto;
+  display: block;
+  margin-top: 10%;
+  z-index: 0;
+  padding:0;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media (min-width: 60em) {
+  #modulo-consigli {
+    z-index: 1;
+    height: 117%;
+    margin-top: 0%;
+    margin-left: 10%;
+    padding: 5% 3% 0% 5%;
+    border-radius: 10%;
+    color:#fff;
+    text-align: center;
+    position:relative;
+  }
+  .immagine-sfondo-consigli{
+    visibility:hidden;
+    position: fixed;
+  }
+}
+  
+/*...............FOOTER.............*/
+
+#footer {
+  background-color: #100303;
+  color:#333;
+  font-size: 50%;
+  text-align: center;
+  margin-bottom: -10%;
+  padding-top: 5%;
+  position: relative;
+}
+
+@media (min-width: 60em) {
+  #footer {
+    font-size: 15px;
+    padding-top: 5%;
+  }
+}

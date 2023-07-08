@@ -1,6 +1,6 @@
 const questions = [
   {
-      question: "Per rinforzare il «tappeto» di suoni di <i>Shine On You Crazy Diamond </i> part 1 - 5, i membri dei Pink Floyd facevano scorrere le dita sul bordo di bicchieri pieni di...",
+      question: "Per rinforzare il «tappeto» di suoni di <i>Shine On You Crazy Diamond </i> part. 1 - 5, i membri dei Pink Floyd facevano scorrere le dita sul bordo di bicchieri pieni di...",
       answers: [
           { text: "acqua", correct: false },
           { text: "gin", correct: false },

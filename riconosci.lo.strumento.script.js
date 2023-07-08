@@ -177,15 +177,13 @@ nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     showQuestion();
   } else {
-    questionElement.innerHTML = "Quiz completato!";
-    answerButtons.innerHTML = "Il tuo punteggio finale è: " + score + " su " + questions.length;
+    questionElement.innerHTML = "<span style='color: white;'>Quiz completato!</span>";
+    answerButtons.innerHTML = "<span style='color: white;'>Il tuo punteggio finale è: " + score + " su " + questions.length + "</span>";
     nextButton.style.display = "none";
 
-       // Aggiungi il link alla pagina "Riconosci lo strumento"
-  var linkElement = document.createElement("a");
-  linkElement.href = "riconosci lo strumento.html";
-  linkElement.textContent = "Rifare il quiz";
-  answerButtons.appendChild(linkElement);
+    // Rimuovi l'audio-container dalla sezione del punteggio finale
+    const audioContainer = document.getElementById("audio-container");
+    audioContainer.style.visibility = "hidden";
 }
 });
 startQuiz();
